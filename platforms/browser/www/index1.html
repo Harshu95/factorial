@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Factorial Application</title>
+		<script>
+			function fact(e){
+				var n=document.getElementById("numb").value;
+				var f = n;
+				for(int i=n;i>0;i--){
+					f*=i;
+				}
+				document.getElementById("result").innerHTML="Factorial of " +n+ " is :" +f;
+				return false;
+			}
+		</script>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+		<form>
+		Enter the number :
+		<input type="number" id="numb"/>
+		<button id="btn" onclick="return fact()">Submit</button>
+		</form>
+		<div id="result">
+		</div>
+    </body>
+</html>
